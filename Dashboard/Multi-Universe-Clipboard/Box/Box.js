@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import logo from "../../assets/img/logo.png";
+import logo from "../../../Compontents/assets/img/logo.png";
 import Link from 'next/link';
 export const Box = () => {
   return (

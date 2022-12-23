@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import { Hr } from "../HrComponent/Hr";
 
 import { useRouter} from 'next/router';
+import { Seo } from '../Seo/Seo';
 import {toast} from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';  
 import axios from 'axios';
@@ -55,6 +56,7 @@ const router=useRouter()
 
   return (
     <>
+    <Seo title={"Login"}/>
     <div className='relative top-16'>
 
       <Hr topheading={"Login"}></Hr>

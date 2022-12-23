@@ -1,13 +1,13 @@
 import React,{useState} from 'react'
 
-import { Footer } from '../../Footer/Footer';
+import { Footer } from '../../../Components/Footer/Footer';
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Template } from '../Template/Template';
+import { Template } from '../../Template/Template';
+import { Seo } from '../../../Components/Seo/Seo';
 
-
-export const Copy = () => {
+export const Copy = (props) => {
   toast.configure()
   const [copiedmaal, setCopiedMaal] = useState("")
   const handleSubmit=  (e)=>{
@@ -46,7 +46,15 @@ export const Copy = () => {
 
   return (
     <>
-    <Template/>
+    <Seo title={"Share Clipboard"}></Seo>
+    <Template 
+    heading={"Multi Universe Clipboard"}
+    para={"The Multi-Universe Clipboard is designed to help the user to copy text from one device to another."}
+   hfirstone={"Share the Clipboard"}
+   hsecondone={"Copy to the Clipboard"}
+   linkone={"dashboard/clipboard"}
+   linktwo={"dashboard/clipboard/copy/"}
+    />
 <div className='flex flex-row '>
 
 

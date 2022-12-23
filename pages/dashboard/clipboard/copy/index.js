@@ -1,8 +1,9 @@
 import React,{useState} from 'react'
 
-import { Footer } from '../../../Components/Footer/Footer';
-import { Template } from '../../../Components/Dashboard/Template/Template';
+import { Footer } from '../../../../Components/Footer/Footer';
+import { Template } from '../../../../Dashboard/Template/Template';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { Seo } from '../../../../Components/Seo/Seo';
 
 const index = ({data}) => {
   const [state, setstate] = useState("")
@@ -16,7 +17,15 @@ const index = ({data}) => {
 
   return (
     <>
-    <Template/>
+    <Seo title={"Copy Clipboard"}/>
+    <Template 
+    heading={"Multi Universe Clipboard"}
+    para={"The Multi-Universe Clipboard is designed to help the user to copy text from one device to another."}
+   hfirstone={"Share the Clipboard"}
+   hsecondone={"Copy to the Clipboard"}
+   linkone={"/dashboard/clipboard"}
+   linktwo={"/dashboard/clipboard/copy/"}
+    />
     <div className='flex flex-row w-2/2 justify-center text-center'>
 
       <div className='flex flex-col text-black  w-4/6 text-center'>
@@ -40,17 +49,17 @@ const index = ({data}) => {
 </div>
 
       </div>
-      <Footer></Footer>
+      <Footer/>
     </>
   )
 }
 
-export const getServerSideProps= async()=> {
+export const getServerSideProps= async ()=> {
     
  
 
 
-  const res = await fetch(process.env.NEXT_PUBLIC_GETCLIPBOARD_API_URL)
+  const res = await fetch(process.env.NEXT_PUBLIC_GETCLIPBOARD_API_URL);
   const  data= await res.json();
   return {
     props: {

@@ -6,6 +6,7 @@ import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';  
 import axios from 'axios';
 import {useRouter}  from 'next/router'
+import { Seo } from '../Seo/Seo';
 export const Singin = () => {
  
 
@@ -42,6 +43,7 @@ export const Singin = () => {
 
   return (
     <>
+    <Seo title={"Signin"}/>
     <div className='relative top-16'>
 
       <Hr topheading={"Sign in"}></Hr>

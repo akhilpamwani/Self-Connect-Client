@@ -6,6 +6,7 @@ import { NavBar } from '../../Components/NavBar/NavBar'
  const login = () => {
   return (
     <>
+  
     <NavBar/>
     <Login/>
     <Footer/>

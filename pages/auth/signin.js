@@ -6,6 +6,7 @@ import {NavBar} from '../../Components/NavBar/NavBar'
  const sigin = () => {
   return (
     <>
+    
      <NavBar/>
     <Singin/>
     <Footer/>
