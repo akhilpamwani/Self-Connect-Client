@@ -4,7 +4,7 @@ import { Footer } from '../../../Components/Footer/Footer';
 import { Template } from '../../../Components/Dashboard/Template/Template';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-const Paste = ({data}) => {
+const index = ({data}) => {
   const [state, setstate] = useState("")
  
     const handleCopy=(e)=>{
@@ -59,4 +59,4 @@ data
     }
 }
 
-export default Paste
+export default index
