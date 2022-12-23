@@ -17,14 +17,14 @@ export const Template = () => {
     <div className="flex flex-wrap -m-4 text-center">
       <div className="p-4 md:w-1/2 sm:w-1/2 w-full">
         <div className="border-2 border-gray-200 justify-center flex flex-col m-auto px-4 py-6 rounded-lg">
-        <Link href= {'/dashboard/copy'}><Image src={Send} width={100} className="justify-center text-center m-auto"/></Link>
+        <Link href= {'/dashboard/copy'}><Image src={Send} alt="img" width={100} className="justify-center text-center m-auto"/></Link>
           <h2 className="title-font font-medium text-3xl text-gray-900">Share the Clipboard</h2>
          
         </div>
       </div>
       <div className="p-4 md:w-1/2 sm:w-1/2 w-full">
       <div className="border-2 border-gray-200 justify-center flex flex-col m-auto px-4 py-6 rounded-lg">
-          <Link href= {'/dashboard/copy/paste'}><Image src={CopyImg} width={100} className="justify-center text-center m-auto"/></Link>
+          <Link href= {'/dashboard/copy/paste'}><Image alt="img" src={CopyImg} width={100} className="justify-center text-center m-auto"/></Link>
           <h2 className="title-font font-medium text-3xl text-gray-900">Copy to the Clipboard</h2>
 
           

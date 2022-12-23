@@ -16,7 +16,7 @@ export const About = (props) => {
      </div>
     
     <div className=' flex justify-start w-1/2 about-right'> 
-    <Image src={props.Img} />
+    <Image alt="menu" src={props.Img} />
     <iframe width="560" height="315" src= {props.video} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>
     </div>

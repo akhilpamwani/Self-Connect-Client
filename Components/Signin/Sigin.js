@@ -24,7 +24,7 @@ export const Singin = () => {
       .then( async() => {
        
        
-        router.push('/auth/login')
+    await    router.push('/auth/login')
     
       }).catch( () => {
    

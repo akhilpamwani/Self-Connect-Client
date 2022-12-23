@@ -5,7 +5,7 @@ import { Template } from '../TEmplate';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import axios from 'axios'
 const paste = () => {
-  const [copyText,setCopyText]=useState('')
+  const [copytext,setcopyText]=useState('')
     const handleCopy=(e)=>{
       e.preventDefault();
       setCopyText(true)
@@ -38,7 +38,7 @@ const paste = () => {
 
   <div  className='flex justify-end w-2/2 ml-5  flex-row' key={val._id}>
   <CopyToClipboard text={val.copiedmaal}
-          onCopy={() => setCopyText({copied: true})}>
+          onCopy={() => setcopyText({copied: true})}>
 <button onClick={handleCopy} className="flex  flex-row text-white bg-blue-500  py-2 px-5 focus:outline-none hover:bg-transparent border-2 hover:border-2 border-blue-500 hover:text-blue-500 hover:border-blue-500 rounded"> Copy </button>
  </CopyToClipboard> </div>
 </div>
