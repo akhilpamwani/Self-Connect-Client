@@ -33,7 +33,7 @@ export const Box = () => {
 
             <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 ">Parimal Share</h1>
             <p class="leading-relaxed mb-3">The Paimal Share is designed to help the user to send files files one device to another.</p>
-            <button class="flex mx-auto mt-6 text-white bg-blue-500 border-0 py-2 px-5 focus:outline-none hover:bg-transparent hover:border-2 hover:text-blue-500 hover:border-blue-500 rounded">Explore</button>
+            <button class="flex mx-auto mt-6 text-white bg-blue-500 border-0 py-2 px-5 focus:outline-none hover:bg-transparent hover:border-2 hover:text-blue-500 hover:border-blue-500 rounded"><Link href={'/dashboard/copy/paste'}></Link>Explore</button>
       
             <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
               

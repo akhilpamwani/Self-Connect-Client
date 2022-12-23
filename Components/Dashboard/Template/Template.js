@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import  Send  from "../../Components/assets/img/send.png";
-import  CopyImg  from "../../Components/assets/img/copy.png";
-import { NavBar } from '../../Components/Dashboard/NavBar/NavBar';
+import  Send  from "../../assets/img/send.png";
+import  CopyImg  from "../../assets/img/copy.png";
+import { NavBar } from '../NavBar/NavBar';
 import Link from 'next/link';
 export const Template = () => {
   return (
@@ -17,14 +17,14 @@ export const Template = () => {
     <div className="flex flex-wrap -m-4 text-center">
       <div className="p-4 md:w-1/2 sm:w-1/2 w-full">
         <div className="border-2 border-gray-200 justify-center flex flex-col m-auto px-4 py-6 rounded-lg">
-        <Link href= {'/dashboard/Copy'}><Image src={Send} alt="img" width={100} className="justify-center text-center m-auto"/></Link>
+        <Link href= {'/dashboard/'}><Image src={Send} alt="img" width={100} className="justify-center text-center m-auto"/></Link>
           <h2 className="title-font font-medium text-3xl text-gray-900">Share the Clipboard</h2>
          
         </div>
       </div>
       <div className="p-4 md:w-1/2 sm:w-1/2 w-full">
       <div className="border-2 border-gray-200 justify-center flex flex-col m-auto px-4 py-6 rounded-lg">
-          <Link href= {'/dashboard/Copy/Paste'}><Image alt="img" src={CopyImg} width={100} className="justify-center text-center m-auto"/></Link>
+          <Link href= {'/dashboard/copy'}><Image alt="img" src={CopyImg} width={100} className="justify-center text-center m-auto"/></Link>
           <h2 className="title-font font-medium text-3xl text-gray-900">Copy to the Clipboard</h2>
 
           

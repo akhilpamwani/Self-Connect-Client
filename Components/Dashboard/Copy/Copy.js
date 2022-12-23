@@ -4,7 +4,7 @@ import { Footer } from '../../Footer/Footer';
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Template } from '../../../pages/dashboard/Template';
+import { Template } from '../Template/Template';
 
 
 export const Copy = () => {

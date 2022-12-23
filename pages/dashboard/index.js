@@ -1,17 +1,10 @@
 import React from 'react'
-import { Box } from '../../Components/Dashboard/Box/Box'
-import { NavBar } from '../../Components/Dashboard/NavBar/NavBar'
-
-import { Footer } from '../../Components/Footer/Footer'
+import { Copy } from '../../Components/Dashboard/Copy/Copy'
 
  const index = () => {
   return (
     <>
-  <NavBar/>
-  <Box/>
-    <Footer/>
-    
-    
+    <Copy/>
     
     </>
   )
