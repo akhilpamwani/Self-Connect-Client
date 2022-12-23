@@ -32,9 +32,9 @@ const Paste = () => {
 
       <div className='flex flex-col text-black  w-4/6 text-center'>
       
-      { getdata.map((val)=>{
+      { getdata.map((val,key)=>{
                return(
-                  <div className='border-2  mt-2 item-center  border-gray-300'  >
+                  <div className='border-2  mt-2 item-center  border-gray-300' key={key} >
                   <p value={setstate} onChange={(e)=>setstate(e.target.value)} className='text-black'>{val.copiedmaal}</p>
 
   <div  className='flex justify-end w-2/2 ml-5  flex-row' key={val._id}>
