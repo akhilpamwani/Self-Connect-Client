@@ -5,6 +5,7 @@ import { Hr } from "../HrComponent/Hr";
 import {toast} from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';  
 import axios from 'axios';
+import {useRouter}  from 'next/router'
 export const Singin = () => {
  
 
@@ -12,30 +13,22 @@ export const Singin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] =useState("");
   
- 
+ const router =useRouter()
 
   
   const handleSubmit= async (e)=>{
     e.preventDefault();
-    // console.log("url", process.env.NEXT_PUBLIC_CONTACT_API_URL );
-  await  axios.post(process.env.NEXT_PUBLIC_SIGN_API_URL,
+    
+  await  axios.post("http://localhost:8000/api/createuser",
     {name:name,email:email,password:password })
       .then( async() => {
-    //  toast.success("Contact data has been saved Successfully");
-     await  toast.success("Signin has been  Successfully", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-       }); 
-        
+       
+       
+        router.push('/auth/login')
     
-      }).catch(async () => {
-      // console.log(" Contact data has not been saved Successfully ");
-     await toast.error("  Email or Password is incorrect ", {
+      }).catch( () => {
+   
+    toast.error("  Email or Password is incorrect ", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,

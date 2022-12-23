@@ -2,12 +2,15 @@ import React,{useState} from 'react'
 
 import { Hr } from "../HrComponent/Hr";
 
+import { useRouter} from 'next/router';
 import {toast} from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';  
 import axios from 'axios';
+
+
  const Login = () => {
  
-
+const router=useRouter()
  
   const [email, setEmail] = useState("");
   const [password, setPassword] =useState("");
@@ -19,20 +22,23 @@ import axios from 'axios';
     e.preventDefault();
     
   await  axios.post(process.env.NEXT_PUBLIC_LOG_API_URL,
-    {name:name,email:email,password:password })
-      .then( () => {
-
-     toast.success("Login has been  Successfully", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-       }); 
+    {email:email,password:password })
+      .then(async () => {
         
-    
+          toast.success("Login has been  Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }); 
+          
+          // localStorage.setItem('token',json.authtoken)
+          router.push('/dashboard')
+        
+   
       }).catch( () => {
    
     toast.error("  Email or Password is incorrect ", {

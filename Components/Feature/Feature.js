@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+
 export const Feature = (props) => {
   return (
     <>
@@ -12,7 +12,7 @@ export const Feature = (props) => {
     <li className='list-none mb-2'>{props.listone}</li>
     <li className='list-none'>{props.listwo}</li>
     
-    
+
  </ul>
      </div>
     
