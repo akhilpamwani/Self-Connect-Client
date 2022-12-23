@@ -1,10 +1,10 @@
-import React,{useEffect,useState} from 'react'
+import React,{useState} from 'react'
 
 import { Footer } from '../../../Components/Footer/Footer';
 import { Template } from '../../../Components/Dashboard/Template/Template';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-import axios from 'axios'
-const Paste = () => {
+
+const Paste = ({data}) => {
   const [state, setstate] = useState("")
  
     const handleCopy=(e)=>{
@@ -12,18 +12,7 @@ const Paste = () => {
       setstate(true)
        
     }
-  const [getdata,setgetdata]=useState([])
-
-   useEffect(()=>{
-     axios.get(process.env.NEXT_PUBLIC_GETCLIPBOARD_API_URL)
-     .then((res)=>{
-       setgetdata(res.data)
-      
-     })
-     .catch((err)=>{
-       console.log(err);
-     })
-   },[]);
+ 
 
   return (
     <>
@@ -32,7 +21,7 @@ const Paste = () => {
 
       <div className='flex flex-col text-black  w-4/6 text-center'>
       
-      { getdata.map((val,key)=>{
+      { data.map((val,key)=>{
                return(
                   <div className='border-2  mt-2 item-center  border-gray-300' key={key} >
                   <p value={setstate} onChange={(e)=>setstate(e.target.value)} className='text-black'>{val.copiedmaal}</p>
@@ -56,18 +45,18 @@ const Paste = () => {
   )
 }
 
-// export const getServerSideProps= async()=> {
+export const getServerSideProps= async()=> {
     
  
 
 
-//   const res = await fetch(process.env.NEXT_PUBLIC_GETCLIPBOARD_API_URL)
-//   const  data= await res.json();
-//   return {
-//     props: {
-// data
-//     }
-//     }
-// }
+  const res = await fetch(process.env.NEXT_PUBLIC_GETCLIPBOARD_API_URL)
+  const  data= await res.json();
+  return {
+    props: {
+data
+    }
+    }
+}
 
 export default Paste
