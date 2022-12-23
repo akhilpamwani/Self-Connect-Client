@@ -9,6 +9,7 @@ import logo from '../Components/assets/img/logo.png';
 import { Contact } from "../Components/Contact/Contact";
 import { Hr } from "../Components/HrComponent/Hr";
 import { Footer } from "../Components/Footer/Footer";
+import { Feature } from "../Components/Feature/Feature";
 // import { NavMb } from "../Components/NavBar/NavMb";
 
 export default function Home() {
@@ -27,14 +28,14 @@ export default function Home() {
  />
  <Hr topheading={"Features"}/>
 
- <About
+ <Feature
   ID={"features"}
   heading={"Multi-Universe Clipboard"}
 listone={"1. The Multi-Universe Clipboard is designed to help the user to copy text from one device to another ."}
  video={'https://www.youtube.com/embed/QE8lcQK5DXM'}
  />
  
- <About
+ <Feature
  ID={"features"}
  heading={" Parimal Share "}
   listone={"1. The Paimal Share is designed to help the user to send files files one device to another ."}
