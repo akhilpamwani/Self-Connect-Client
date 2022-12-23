@@ -5,18 +5,18 @@ import { Template } from '../TEmplate';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import axios from 'axios'
 const paste = () => {
-  const [copytext,setcopyText]=useState('')
+  const [state, setstate] = useState("")
     const handleCopy=(e)=>{
       e.preventDefault();
-      setCopyText(true)
+      setstate(true)
        
     }
-  const [getData,setGetData]=useState([])
+  const [getdata,setgetdata]=useState([])
 
    useEffect(()=>{
      axios.get("http://localhost:8000/api/getclipboard")
      .then((res)=>{
-       setGetData(res.data)
+       setgetdata(res.data)
       
      })
      .catch((err)=>{
@@ -31,14 +31,14 @@ const paste = () => {
 
       <div className='flex flex-col text-black  w-4/6 text-center'>
       
-      { getData.map((val,key)=>{
+      { getdata.map((val)=>{
                return(
                   <div className='border-2  mt-2 item-center  border-gray-300'  >
-                  <p value={setCopyText} onChange={(e)=>setCopyText(e.target.value)} className='text-black'>{val.copiedmaal}</p>
+                  <p value={setstate} onChange={(e)=>setstate(e.target.value)} className='text-black'>{val.copiedmaal}</p>
 
   <div  className='flex justify-end w-2/2 ml-5  flex-row' key={val._id}>
   <CopyToClipboard text={val.copiedmaal}
-          onCopy={() => setcopyText({copied: true})}>
+          onCopy={() => setstate({copied: true})}>
 <button onClick={handleCopy} className="flex  flex-row text-white bg-blue-500  py-2 px-5 focus:outline-none hover:bg-transparent border-2 hover:border-2 border-blue-500 hover:text-blue-500 hover:border-blue-500 rounded"> Copy </button>
  </CopyToClipboard> </div>
 </div>
