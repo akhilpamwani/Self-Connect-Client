@@ -15,7 +15,7 @@ const Paste = () => {
   const [getdata,setgetdata]=useState([])
 
    useEffect(()=>{
-     axios.get("http://localhost:8000/api/getclipboard")
+     axios.get(process.env.NEXT_PUBLIC_GETCLIPBOARD_API_URL)
      .then((res)=>{
        setgetdata(res.data)
       
