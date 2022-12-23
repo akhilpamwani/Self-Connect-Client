@@ -4,7 +4,7 @@ import { Footer } from '../../../Components/Footer/Footer';
 import { Template } from '../TEmplate';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import axios from 'axios'
-const paste = () => {
+const Paste = () => {
   const [state, setstate] = useState("")
   state()
     const handleCopy=(e)=>{
@@ -70,4 +70,4 @@ const paste = () => {
 //     }
 // }
 
-export default paste
+export default Paste
