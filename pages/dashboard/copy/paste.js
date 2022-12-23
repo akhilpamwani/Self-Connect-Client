@@ -6,6 +6,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import axios from 'axios'
 const paste = () => {
   const [state, setstate] = useState("")
+  state()
     const handleCopy=(e)=>{
       e.preventDefault();
       setstate(true)
